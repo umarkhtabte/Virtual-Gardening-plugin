@@ -1,0 +1,316 @@
+.tpgs-garden-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.garden-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pods-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.pod {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pod:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pod.empty {
+    background-color: #f8f9fa;
+}
+
+.pod.growing {
+    border-color: #ffc107;
+    background-color: #fff3cd;
+}
+
+.pod.ready {
+    border-color: #28a745;
+    background-color: #d4edda;
+}
+
+.pod-number {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.pod-status {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.vegetable-icon {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.vegetable-name {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.days-remaining {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* Modals */
+.vegetables-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.vegetable-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vegetable-item:hover {
+    background-color: #f8f9fa;
+}
+
+.vegetable-item.selected {
+    border-color: #0d6efd;
+    background-color: #e7f1ff;
+}
+
+.vegetable-duration {
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+/* Pod Detail */
+.pod-detail-image {
+    max-width: 100px;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.date-picker-container {
+    margin: 15px 0;
+}
+
+/* Alert styles */
+.tpgs-alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 350px;
+}
+
+/* Modal adjustments */
+.modal-body {
+    padding: 20px;
+}
+
+.pod-detail-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 15px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+    font-weight: bold;
+}
+
+.detail-value {
+    color: #666;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.pods-grid.updating {
+    position: relative;
+    opacity: 0.7;
+}
+.pods-grid.updating::after {
+    content: "Updating...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pod-counter .active-count {
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.pod-counter .active-count.updating {
+    transform: scale(1.2);
+    color: #28a745;
+}
+
+/* Badge Notifications */
+#badge-notifications-container {
+    max-width: 300px;
+}
+
+.badge-notification {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.badge-notification img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* Badges Section */
+.tpgs-badges-section {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.badges-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badges-title small {
+    font-size: 0.8em;
+    margin-left: auto;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+}
+
+.badge-item {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.badge-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 3px solid #28a745;
+    padding: 3px;
+    background: white;
+}
+
+.badge-item.locked img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    border-color: #ddd;
+}
+
+.locked-badge {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background: #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.5rem;
+}
+
+.badge-label {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge-item.locked .badge-label {
+    color: #999;
+}
+
+/* Tooltip customization */
+.tooltip {
+    font-family: inherit;
+}
+.tooltip-inner {
+    max-width: 200px;
+    padding: 8px 12px;
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .pods-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .vegetables-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .pods-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vegetables-grid {
+        grid-template-columns: 1fr;
+    }
+}

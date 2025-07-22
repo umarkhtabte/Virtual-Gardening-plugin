@@ -1,0 +1,15 @@
+/* Scoped to only affect new dashboard */
+.dashboard .plant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dashboard .pod {
+    /* Your custom pod styling */
+}
+
+/* Preserve original functionality classes */
+.dashboard .pod.empty-pod {
+    cursor: pointer;
+}

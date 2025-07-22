@@ -1,0 +1,46 @@
+/* Admin Styles for 12-Pod Gardening System */
+.wrap h1 {
+    margin-bottom: 20px;
+}
+
+#vegetables-list td, #vegetables-list th {
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+#vegetables-list input[type="text"],
+#vegetables-list input[type="number"] {
+    margin: 0;
+}
+
+#vegetables-list .regular-text {
+    width: 100%;
+}
+
+#vegetables-list .small-text {
+    width: 80px;
+}
+
+.remove-vegetable {
+    margin-left: 5px;
+}
+
+.form-table th {
+    width: 200px;
+}
+
+/* Add new vegetable form */
+#new_vegetable_name,
+#new_vegetable_icon {
+    width: 100%;
+}
+
+#new_vegetable_duration {
+    width: 80px;
+}
+
+/* Error message styling */
+.notice-error {
+    margin: 5px 0 15px;
+    padding: 10px;
+}
